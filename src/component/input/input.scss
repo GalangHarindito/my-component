@@ -1,0 +1,47 @@
+@import "../../utils/color.scss";
+
+.wrapper-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.label-input {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.wrapper-error-message {
+  .error-input {
+    margin: 0.2rem 0;
+    color: $Error-red-color-text;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+}
+
+.storybook-input {
+  height: 2rem;
+  font-size: 1rem;
+  padding: 0.2rem 0.1rem;
+  outline: none;
+  border: none;
+  border-bottom: 1.8px solid #515151;
+  background: transparent;
+
+  &:focus {
+    border-bottom: 2.2px solid #515151;
+  }
+}
+
+.storybook-error-boundary {
+  border: 1.5px solid $Error-red-color-text;
+}
+
+.storybook-size-large {
+  width: 100%;
+}
+
+.storybook-size-medium {
+    width: 50%;
+  }
