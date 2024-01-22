@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input layout should not be change 1`] = `
+<div>
+  <div
+    class="wrapper-input"
+  >
+    <label
+      class="label-input"
+      for="input"
+    >
+      Label Text
+    </label>
+    <input
+      class="storybook-input storybook-size-large "
+      id="input"
+      placeholder="Input Name"
+      type="text"
+    />
+  </div>
+</div>
+`;

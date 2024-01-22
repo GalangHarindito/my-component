@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button layut should not change 1`] = `
+<div>
+  <button
+    class="storybook-button storybook-button--medium storybook-button--primary"
+    type="button"
+  >
+    Button
+  </button>
+</div>
+`;
+
+exports[`Button layut should not change 2`] = `
+<div>
+  <button
+    class="storybook-button storybook-button--medium storybook-button--secondary"
+    type="button"
+  >
+    Button
+  </button>
+</div>
+`;

@@ -2,6 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./input.scss";
 
+/**
+ * Primary UI component for user interaction
+ */
+
 export const Input = ({
   label,
   onChange,
@@ -15,7 +19,7 @@ export const Input = ({
     <>
       <div className="wrapper-input">
         {label && (
-          <label className="label-input" for="input">
+          <label className="label-input" htmlFor="input">
             {label}
           </label>
         )}
