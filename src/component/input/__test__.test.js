@@ -1,24 +1,30 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import { composeStories } from '@storybook/react';
-import * as stories from '../../stories/Input.stories'; // import all stories from the stories file
+import * as stories from '../../stories/Input.stories';
+import { Input } from './Input'; // import all stories from the stories file
 
 const { Large } = composeStories(stories);
 
-test('Input layout should not be change', () => {
+test('Make sure input UI does not change unexpectedly', () => {
     const { container } = render(<Large />)
     expect(container).toMatchSnapshot()
-})
+}) 
 
-// test('renders primary button with default args', () => {
-//   render(<Primary />);
-//   const buttonElement = screen.getByText(
-//     /Button/i
-//   );
-//   expect(buttonElement).not.toBeNull();
-// });
+test('renders large input with default args', () => {
+  render(<Large />);
+  const inputPlaceholder = screen.getByPlaceholderText(
+    /Input Name/i
+  );
+  const inputLabel = screen.getByLabelText(
+    /Label Text/i
+  )
 
-// test('renders primary button with overriden props', () => {
-//   render(<Primary>Button</Primary>); // you can override props and they will get merged with values from the Story's args
-//   const buttonElement = screen.getByText(/Button/i);
-//   expect(buttonElement).not.toBeNull();
-// });
+  expect(inputPlaceholder).toHaveAttribute('placeholder', 'Input Name');
+  expect(inputLabel).not.toBeNull();
+});
+
+test('renders input display value', () => {
+  render(<Input />);
+  const inputValue = screen.getByDisplayValue('');
+  fireEvent.change(inputValue, { target: { value: "Test Input" } });
+});

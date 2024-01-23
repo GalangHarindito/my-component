@@ -42,7 +42,7 @@ export const Input = ({
 };
 
 Input.propTypes = {
-  placeholder: PropTypes.string,
+  placeholder: PropTypes.string.isRequired,
   label: PropTypes.string,
   onChange: PropTypes.func,
   size: PropTypes.oneOf(["large", "medium"]),

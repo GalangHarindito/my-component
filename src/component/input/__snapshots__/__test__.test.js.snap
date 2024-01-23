@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Input layout should not be change 1`] = `
+exports[`Make sure input UI does not change unexpectedly 1`] = `
 <div>
   <div
     class="wrapper-input"
