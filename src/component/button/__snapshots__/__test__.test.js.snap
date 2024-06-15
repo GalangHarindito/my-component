@@ -3,32 +3,50 @@
 exports[`Button layout should not change 1`] = `
 <div>
   <button
-    class="storybook-button storybook-button--medium storybook-button--secondary"
+    class="storybook-button storybook-button--large storybook-button--primary false"
     type="button"
   >
-    Button
+    <div
+      class=""
+    >
+      <span>
+        Button
+      </span>
+    </div>
   </button>
 </div>
 `;
 
-exports[`Button layut should not change 1`] = `
+exports[`Button layout should not change 2`] = `
 <div>
   <button
-    class="storybook-button storybook-button--medium storybook-button--primary"
+    class="storybook-button storybook-button--medium storybook-button--primary false"
     type="button"
   >
-    Button
+    <div
+      class=""
+    >
+      <span>
+        Button
+      </span>
+    </div>
   </button>
 </div>
 `;
 
-exports[`Button layut should not change 2`] = `
+exports[`Button layout should not change 3`] = `
 <div>
   <button
-    class="storybook-button storybook-button--medium storybook-button--secondary"
+    class="storybook-button storybook-button--small storybook-button--primary false"
     type="button"
   >
-    Button
+    <div
+      class=""
+    >
+      <span>
+        Button
+      </span>
+    </div>
   </button>
 </div>
 `;

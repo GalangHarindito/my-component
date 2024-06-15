@@ -1,54 +1,46 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./button.css";
+import "./button.scss";
+import { Loader } from "../spinner/loader";
 
-/**
- * Primary UI component for user interaction
- */
-export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
-  const mode = primary
-    ? "storybook-button--primary"
-    : "storybook-button--secondary";
+export const Button = ({ mode, backgroundColor, size, label, loading, disabled, icon, onClick, ...props }) => {
+
   return (
     <button
       type="button"
-      className={["storybook-button", `storybook-button--${size}`, mode].join(
+      className={["storybook-button", `storybook-button--${size}`, `${mode && `storybook-button--${mode}`}`, `${disabled && `disabled`}`].join(
         " "
       )}
+      onClick={onClick}
       style={backgroundColor && { backgroundColor }}
+      disabled = {disabled}
       {...props}
     >
-      {label}
+      <div className={loading || icon ? 'button-aside' : ''}>
+      {loading ? <Loader size='small' />  : '' }
+      {icon}
+      <span>{loading? 'Loading': label }</span>
+      </div>
     </button>
   );
 };
 
 Button.propTypes = {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary: PropTypes.bool,
-  /**
-   * What background color to use
-   */
+  mode: PropTypes.oneOf(["primary","secondary", "info", "warning", "danger"]),
   backgroundColor: PropTypes.string,
-  /**
-   * How large should the button be?
-   */
   size: PropTypes.oneOf(["small", "medium", "large"]),
-  /**
-   * Button contents
-   */
   label: PropTypes.string.isRequired,
-  /**
-   * Optional click handler
-   */
+  disabled: PropTypes.bool,
+  loading: PropTypes.bool,
   onClick: PropTypes.func,
 };
 
 Button.defaultProps = {
+  mode: "primary",
   backgroundColor: null,
-  primary: false,
-  size: "medium",
+  size: "large",
   onClick: undefined,
+  loading: false,
+  disabled: false,
+  label:"Button"
 };

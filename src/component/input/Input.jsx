@@ -8,10 +8,10 @@ import "./input.scss";
 
 export const Input = ({
   label,
-  onChange,
   size,
   placeholder,
   style,
+  onChange,
   error,
   ...props
 }) => {
@@ -29,6 +29,7 @@ export const Input = ({
           placeholder={placeholder}
           className={["storybook-input", `storybook-size-${size}`, `${error && `storybook-error-boundary`}`].join(" ")}
           style={style}
+          onChange={onChange}
           {...props}
         />
         {error && (

@@ -1,0 +1,36 @@
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+npm ERR! 
+npm ERR! While resolving: @storybook/testing-react@2.0.1
+npm ERR! Found: @storybook/react@8.1.9
+npm ERR! node_modules/@storybook/react
+npm ERR!   @storybook/react@"8.1.9" from @storybook/preset-react-webpack@8.1.9
+npm ERR!   node_modules/@storybook/preset-react-webpack
+npm ERR!     @storybook/preset-react-webpack@"8.1.9" from @storybook/react-webpack5@8.1.9
+npm ERR!     node_modules/@storybook/react-webpack5
+npm ERR!       dev @storybook/react-webpack5@"^8.1.9" from the root project
+npm ERR!   @storybook/react@"8.1.9" from @storybook/react-webpack5@8.1.9
+npm ERR!   node_modules/@storybook/react-webpack5
+npm ERR!     dev @storybook/react-webpack5@"^8.1.9" from the root project
+npm ERR!   1 more (the root project)
+npm ERR! 
+npm ERR! Could not resolve dependency:
+npm ERR! peer @storybook/react@"^7.0.0-beta.0 || ^7.0.0-rc.0 || ^7.0.0" from @storybook/testing-react@2.0.1
+npm ERR! node_modules/@storybook/testing-react
+npm ERR!   dev @storybook/testing-react@"^2.0.1" from the root project
+npm ERR! 
+npm ERR! Conflicting peer dependency: @storybook/react@7.6.19
+npm ERR! node_modules/@storybook/react
+npm ERR!   peer @storybook/react@"^7.0.0-beta.0 || ^7.0.0-rc.0 || ^7.0.0" from @storybook/testing-react@2.0.1
+npm ERR!   node_modules/@storybook/testing-react
+npm ERR!     dev @storybook/testing-react@"^2.0.1" from the root project
+npm ERR! 
+npm ERR! Fix the upstream dependency conflict, or retry
+npm ERR! this command with --force or --legacy-peer-deps
+npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
+npm ERR! 
+npm ERR! 
+npm ERR! For a full report see:
+npm ERR! /home/galang/.npm/_logs/2024-06-13T20_41_38_817Z-eresolve-report.txt
+
+npm ERR! A complete log of this run can be found in: /home/galang/.npm/_logs/2024-06-13T20_41_38_817Z-debug-0.log

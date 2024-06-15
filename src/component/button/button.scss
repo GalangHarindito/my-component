@@ -1,0 +1,67 @@
+@import "../../utils/color.scss";
+
+.storybook-button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  border: 0;
+  border-radius: 3em;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+  color: $text-button;
+  background-color: $primary-button-color;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+}
+
+.storybook-button--primary {
+  color: $text-button;
+  background-color: $primary-button-color;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+}
+
+.storybook-button--secondary {
+  color: $text-secondary-button;
+  background-color: $secondary-button-color;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+}
+
+.storybook-button--info {
+  color: $text-button;
+  background-color: $info-button-color;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+}
+
+.storybook-button--warning {
+  color: $text-button;
+  background-color: $warning-button-color;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+}
+
+.storybook-button--danger {
+  color: $text-button;
+  background-color: $danger-button-color;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+}
+
+.storybook-button--small {
+  font-size: 12px;
+  padding: 10px 16px;
+}
+.storybook-button--medium {
+  font-size: 14px;
+  padding: 11px 20px;
+}
+.storybook-button--large {
+  font-size: 16px;
+  padding: 12px 24px;
+}
+
+.button-aside{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.disabled{
+  opacity: 0.6;
+}

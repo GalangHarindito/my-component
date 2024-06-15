@@ -1,23 +1,28 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import { composeStories } from '@storybook/react';
 import * as stories from '../../stories/Button.stories';
 import { Button } from './Button';
 import userEvent from '@testing-library/user-event'
 
-const { Primary, Secondary } = composeStories(stories);
+const { Large, Medium, Small } = composeStories(stories);
 
-test('Button layut should not change', () => {
-    const { container } = render(<Primary />)
+test('Button layout should not change', () => {
+    const { container } = render(<Large />)
     expect(container).toMatchSnapshot()
 })
 
 test('Button layout should not change', () => {
-    const { container } = render(<Secondary />)
+    const { container } = render(<Medium />)
     expect(container).toMatchSnapshot()
 })
 
-test('renders primary button with default args', () => {
-  render(<Primary />);
+test('Button layout should not change', () => {
+  const { container } = render(<Small />)
+  expect(container).toMatchSnapshot()
+})
+
+test('renders Large button with default args', () => {
+  render(<Large />);
   const buttonElement = screen.getByText(
     /Button/i
   );
@@ -25,7 +30,7 @@ test('renders primary button with default args', () => {
 });
 
 test('renders primary button with overriden props', () => {
-  render(<Primary>Button</Primary>); // you can override props and they will get merged with values from the Story's args
+  render(<Large>Button</Large>); // you can override props and they will get merged with values from the Story's args
   const buttonElement = screen.getByText(/Button/i);
   expect(buttonElement).not.toBeNull();
 });
@@ -33,8 +38,8 @@ test('renders primary button with overriden props', () => {
 test('renders button on click event', () => {
   const onChangeSpy = jest.fn()
 
-  render(<Button onChange={onChangeSpy} label='label' />)
-  const label = screen.getByText(/label/i)
+  render(<Button onChange={onChangeSpy} label='button' />)
+  const label = screen.getByText(/button/i)
   const button = screen.getByRole('button')
   userEvent.click(button)
 
@@ -42,16 +47,28 @@ test('renders button on click event', () => {
   expect(onChangeSpy).not.toHaveBeenCalled()
 })
 
-test('renders secondary button with default args', () => {
-    render(<Secondary />);
-    const buttonElement = screen.getByText(
-      /Button/i
-    );
-    expect(buttonElement).not.toBeNull();
-  });
+test('renders button on change mode', () => {
+  const onClick = jest.fn()
+
+  render(<Button onClick={onClick} label='button' />)
+  const label = screen.getByText(/button/i)
+  const button = screen.getByRole('button')
+  fireEvent.click(button)
+
+  expect(label).not.toBeNull()
+  expect(onClick).toHaveBeenCalled()
+})
+
+// test('renders secondary button with default args', () => {
+//     render(<Secondary />);
+//     const buttonElement = screen.getByText(
+//       /Button/i
+//     );
+//     expect(buttonElement).not.toBeNull();
+//   });
   
-  test('renders primary button with overriden props', () => {
-    render(<Secondary>Button</Secondary>); // you can override props and they will get merged with values from the Story's args
-    const buttonElement = screen.getByText(/Button/i);
-    expect(buttonElement).not.toBeNull();
-  });
+//   test('renders primary button with overriden props', () => {
+//     render(<Secondary>Button</Secondary>); // you can override props and they will get merged with values from the Story's args
+//     const buttonElement = screen.getByText(/Button/i);
+//     expect(buttonElement).not.toBeNull();
+//   });

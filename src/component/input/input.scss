@@ -7,7 +7,7 @@
 
 .label-input {
   margin: 0.5rem 0;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 
@@ -17,13 +17,15 @@
     color: $Error-red-color-text;
     font-weight: 600;
     font-size: 0.9rem;
+    padding-left: 0.4rem;
   }
 }
 
 .storybook-input {
+  font-family: "Poppins", sans-serif;
   height: 2rem;
   font-size: 1rem;
-  padding: 0.2rem 0.1rem;
+  padding: 0.1rem 0.4rem;
   outline: none;
   border: none;
   border-bottom: 1.8px solid #515151;
@@ -35,7 +37,7 @@
 }
 
 .storybook-error-boundary {
-  border: 1.5px solid $Error-red-color-text;
+  border-bottom: 2.2px solid $Error-red-color-text;
 }
 
 .storybook-size-large {
