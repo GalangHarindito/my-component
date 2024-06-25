@@ -20,3 +20,24 @@ exports[`Make sure input UI does not change unexpectedly 1`] = `
   </div>
 </div>
 `;
+
+exports[`Make sure input UI does not change unexpectedly 2`] = `
+<div>
+  <div
+    class="wrapper-input"
+  >
+    <label
+      class="label-input"
+      for="input"
+    >
+      Label Text
+    </label>
+    <input
+      class="storybook-input storybook-size-medium "
+      id="input"
+      placeholder="Input Name"
+      type="text"
+    />
+  </div>
+</div>
+`;

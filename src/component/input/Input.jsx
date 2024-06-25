@@ -13,6 +13,7 @@ export const Input = ({
   style,
   onChange,
   error,
+  mandatory,
   ...props
 }) => {
   return (
@@ -21,6 +22,7 @@ export const Input = ({
         {label && (
           <label className="label-input" htmlFor="input">
             {label}
+            {mandatory && <span className="asterix"> *</span>}
           </label>
         )}
         <input
@@ -48,6 +50,7 @@ Input.propTypes = {
   onChange: PropTypes.func,
   size: PropTypes.oneOf(["large", "medium"]),
   error: PropTypes.string,
+  mandatory: PropTypes.bool
 };
 
 Input.defaultProps = {
@@ -56,4 +59,5 @@ Input.defaultProps = {
   label: "Name",
   size: "medium",
   error: "",
+  mandatory: false
 };
