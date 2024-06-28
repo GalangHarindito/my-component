@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <h1>learn react</h1>
-      <Input size='medium' onChange={(e) => handleChange(e)} error={'error'} />
+      <Input size='large' onChange={(e) => handleChange(e)} error={'error'} />
       <Button mode="secondary" size='large' onClick={handleClick} label='Submit' icon={<AiFillBell />} disabled />
     </div>
   );

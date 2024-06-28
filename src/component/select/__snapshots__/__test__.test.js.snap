@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Make sure input UI does not change unexpectedly 1`] = `
+<div>
+  <div
+    class="wrapper-select"
+  >
+    <label
+      class="label-input"
+      for="input"
+    >
+      Label Text
+    </label>
+    <select
+      class="storybook-select storybook-size-large "
+    >
+      <option
+        class="storybook-option-default"
+        value=""
+      >
+         Input Value
+      </option>
+      <option
+        class="storybook-option"
+        value="test1"
+      >
+        🤣
+         
+        <span>
+          test1
+        </span>
+      </option>
+      <option
+        class="storybook-option"
+        value="test2"
+      >
+        😆
+         
+        <span>
+          test2
+        </span>
+      </option>
+      <option
+        class="storybook-option"
+        value="test3"
+      >
+        🥰
+         
+        <span>
+          test3
+        </span>
+      </option>
+    </select>
+  </div>
+</div>
+`;

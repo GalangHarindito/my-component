@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Make sure input UI does not change unexpectedly 1`] = `
+<div>
+  <div
+    class="loader loader-large"
+  />
+</div>
+`;
+
+exports[`Make sure input UI does not change unexpectedly 2`] = `
+<div>
+  <div
+    class="loader loader-medium"
+  />
+</div>
+`;
+
+exports[`Make sure input UI does not change unexpectedly 3`] = `
+<div>
+  <div
+    class="loader loader-small"
+  />
+</div>
+`;

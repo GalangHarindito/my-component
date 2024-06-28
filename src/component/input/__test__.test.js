@@ -34,7 +34,7 @@ test('renders input display value', () => {
   expect(onChange).toHaveBeenCalled()
 });
 
-test('Input should show validation', () => {
+test('Large Input should show validation', () => {
   render(<Large error='error' />);
 
   const errorDisplay = screen.findByText(
@@ -60,4 +60,14 @@ const inputLabel = screen.getByLabelText(
 
 expect(inputPlaceholder).toHaveAttribute('placeholder', 'Input Name');
 expect(inputLabel).not.toBeNull();
+});
+
+test('Large Input should show validation', () => {
+  render(<Medium error='error' />);
+
+  const errorDisplay = screen.findByText(
+    "error"
+  );
+
+  waitFor(() => expect(errorDisplay).toBeInTheDocument());
 });

@@ -12,7 +12,7 @@ exports[`Make sure input UI does not change unexpectedly 1`] = `
       Label Text
     </label>
     <input
-      class="storybook-input storybook-size-large "
+      class=" storybook-input storybook-size-large "
       id="input"
       placeholder="Input Name"
       type="text"
@@ -33,7 +33,7 @@ exports[`Make sure input UI does not change unexpectedly 2`] = `
       Label Text
     </label>
     <input
-      class="storybook-input storybook-size-medium "
+      class=" storybook-input storybook-size-medium "
       id="input"
       placeholder="Input Name"
       type="text"

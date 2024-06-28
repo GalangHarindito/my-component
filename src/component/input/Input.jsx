@@ -8,12 +8,14 @@ import "./input.scss";
 
 export const Input = ({
   label,
+  name,
   size,
   placeholder,
   style,
   onChange,
   error,
   mandatory,
+  className,
   ...props
 }) => {
   return (
@@ -22,14 +24,20 @@ export const Input = ({
         {label && (
           <label className="label-input" htmlFor="input">
             {label}
-            {mandatory && <span className="asterix"> *</span>}
+            {mandatory && <span className="asterix">*</span>}
           </label>
         )}
         <input
           type="text"
           id="input"
           placeholder={placeholder}
-          className={["storybook-input", `storybook-size-${size}`, `${error && `storybook-error-boundary`}`].join(" ")}
+          name={name}
+          className={[
+            className,
+            "storybook-input",
+            `storybook-size-${size}`,
+            `${error && `storybook-error-boundary`}`,
+          ].join(" ")}
           style={style}
           onChange={onChange}
           {...props}
@@ -50,7 +58,7 @@ Input.propTypes = {
   onChange: PropTypes.func,
   size: PropTypes.oneOf(["large", "medium"]),
   error: PropTypes.string,
-  mandatory: PropTypes.bool
+  mandatory: PropTypes.bool,
 };
 
 Input.defaultProps = {
@@ -59,5 +67,5 @@ Input.defaultProps = {
   label: "Name",
   size: "medium",
   error: "",
-  mandatory: false
+  mandatory: false,
 };
